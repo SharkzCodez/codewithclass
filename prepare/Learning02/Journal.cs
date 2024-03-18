@@ -4,9 +4,8 @@ public class Journal
     
     public void AddEntry(Entry newEntry)
     {
-        PromptGenerator variable = new PromptGenerator();
-        string anotherVariable = variable.Prompts();
-        Console.WriteLine($"\n{anotherVariable}");
+        Console.WriteLine(variable.Prompts());
+        String _entryText = Console.ReadLine();
     }
     public void DisplayAll()
     {}

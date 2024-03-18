@@ -2,7 +2,7 @@ public class PromptGenerator
 {
     public List<string> _prompts;
 
-    public PromptGenerator()
+    private PromptGenerator()
     {
         _prompts.Add("What was the best part of today? ");
         _prompts.Add("Did you see any animals today? ");
@@ -12,10 +12,11 @@ public class PromptGenerator
         
     }
 
-    public void Prompts()
+    public string Prompts()
     {
         Random journalPrompt = new Random();
         int index = journalPrompt.Next(0, _prompts.Count);
         string prompt = _prompts[index];
+        return _prompts[index];
     }
 }
